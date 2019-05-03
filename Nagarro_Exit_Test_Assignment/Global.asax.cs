@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Http;
+using Nagarro_Exit_Test_Assignment.App_Start;
 
 namespace Nagarro_Exit_Test_Assignment
     {
@@ -12,6 +14,7 @@ namespace Nagarro_Exit_Test_Assignment
         {
         protected void Application_Start()
             {
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
